@@ -8,7 +8,7 @@ sap.ui.require(
     function(JourneyRunner, opaJourney, IncidentsList, IncidentsObjectPage) {
         'use strict';
         var JourneyRunner = new JourneyRunner({
-            // start index.html in web folder
+            // start index.html in web-folder
             launchUrl: sap.ui.require.toUrl('ns/incidents') + '/index.html'
         });
 

@@ -2,7 +2,7 @@ sap.ui.define([
     "sap/ui/test/opaQunit"
 ], function (opaTest) {
     "use strict";
-
+//
     var Journey = {
         run: function() {
             QUnit.module("First journey");

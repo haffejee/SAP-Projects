@@ -18,6 +18,31 @@
     "start": "cds-serve",
     "watch-incidents": "cds watch --open incidents/webapp/index.html?sap-ui-xx-viewCache=false"
   },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "${CDS_USER_YAHYA_EMAIL}": {
+              "password": "${CDS_USER_YAHYA_PASSWORD}",
+              "roles": ["support"]
+            },
+            "yahya": {
+              "roles": ["support"]
+            },
+            "sai": {
+              "roles": ["support"]
+            },
+            "${CDS_USER_SAI_EMAIL}": {
+            "password": "${CDS_USER_SAI_PASSWORD}",
+            "roles": ["support"] 
+            }
+          }
+        }
+      }
+    }
+  },
   "sapux": [
     "app/incidents"
   ]

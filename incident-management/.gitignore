@@ -1,5 +1,5 @@
 #creds
-crd.env
+.env
 
 # CAP incident-management
 _out

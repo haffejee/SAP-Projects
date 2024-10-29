@@ -8,7 +8,9 @@
   "dependencies": {
     "@sap/cds": "^8",
     "dotenv": "^16.4.5",
-    "express": "^4"
+    "express": "^4",
+    "@cap-js/hana": "^1",
+    "@sap/xssec": "^4"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.6",
@@ -31,23 +33,33 @@
         "auth": {
           "kind": "mocked",
           "users": {
-            "${CDS_USER_YAHYA_EMAIL}": {
-              "password": "${CDS_USER_YAHYA_PASSWORD}",
-              "roles": ["support"]
-            },
-            "jacobs": {
+            "incident.support@tester.sap.com": {
+              "password": "initial",
               "roles": [
                 "support"
               ]
             },
-            "sai": {
+            "alice": {
+              "roles": [
+                "support"
+              ]
+            },
+            "bob": {
               "roles": [
                 "support"
               ]
             }
           }
         }
-      }
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      },
+      "html5-repo": true
+    },
+    "sql": {
+      "native_hana_associations": false
     }
   },
   "sapux": [
